@@ -78,7 +78,11 @@ public class PlayerController : MonoBehaviour {
         // apply planar drag if not inputing
         if (!airborne && !Input.GetButton("Horizontal") && !Input.GetButton("Vertical")) {
             
-            movePlanarGlobal = movePlanarGlobal.normalized * (movePlanarGlobal.magnitude - acceleration * Time.deltaTime);
+            if (movePlanarGlobal.magnitude > 1f) {
+                movePlanarGlobal = movePlanarGlobal.normalized * (movePlanarGlobal.magnitude - acceleration * Time.deltaTime);
+            } else {
+                movePlanarGlobal *= 0f;
+            }
         }
 
         // animation from planar movement

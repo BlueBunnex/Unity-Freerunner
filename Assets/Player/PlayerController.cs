@@ -39,6 +39,11 @@ public class PlayerController : MonoBehaviour {
 
         UpdateCamera();
         UpdateMovement();
+
+        if (transform.position.y < -10f) {
+            
+            LevelController.instance.resetLevel();
+        }
     }
 
     void LateUpdate() {
@@ -69,7 +74,7 @@ public class PlayerController : MonoBehaviour {
 
         // apply input to planar movement
         movePlanarGlobal += ( transform.right * Input.GetAxis("Horizontal")
-                            + transform.forward * Input.GetAxis("Vertical"))
+                            + transform.forward * Input.GetAxis("Vertical")).normalized
                             * (airborne ? airAcceleration : groundAcceleration)
                             * Time.deltaTime;
 

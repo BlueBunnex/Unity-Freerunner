@@ -64,8 +64,9 @@
   <ItemGroup>
     <Compile Include="Assets/Player/BreastJiggle.cs" />
     <Compile Include="Assets/PointSystem/PointHandler.cs" />
-    <Compile Include="Assets/Player/PlayerController.cs" />
     <Compile Include="Assets/World/BounceArea.cs" />
+    <Compile Include="Assets/Player/PlayerController.cs" />
+    <Compile Include="Assets/World/LevelController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

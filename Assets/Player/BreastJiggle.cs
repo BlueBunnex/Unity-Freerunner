@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class BreastJiggle : MonoBehaviour {
 
-    private Quaternion restingRotationLocal;
+    public float dampen     = 6f;
+    public float elasticity = 2f;
 
-    private Quaternion lastRotationGlobal;
-
-    private Quaternion rotationalVelocity;
+    private Quaternion restingRotationLocal; // Stays the same, used to determine acceleration
+    private Quaternion lastRotationGlobal;   // So that animation is accounted for
+    private Quaternion rotationalVelocity;   // current - resting = velocity, then update current
 
     void Start() {
 
@@ -23,13 +24,13 @@ public class BreastJiggle : MonoBehaviour {
         transform.rotation = lastRotationGlobal;
 
         // dampen rotational velocity
-        rotationalVelocity = Quaternion.Lerp(rotationalVelocity, Quaternion.identity, 2f * Time.deltaTime);
+        rotationalVelocity = Quaternion.Lerp(rotationalVelocity, Quaternion.identity, dampen * Time.deltaTime);
 
         // accelerate rotational velocity towards resting rotation
         Quaternion restingRotationGlobal = transform.parent.rotation * restingRotationLocal;
 
         Quaternion difference = Quaternion.Inverse(transform.rotation) * restingRotationGlobal;
-        Quaternion acceleration = Quaternion.Lerp(Quaternion.identity, difference, 5f * Time.deltaTime);
+        Quaternion acceleration = Quaternion.Lerp(Quaternion.identity, difference, elasticity * Time.deltaTime);
 
         rotationalVelocity = rotationalVelocity * acceleration;
 

@@ -16,7 +16,8 @@ public class PlayerController : MonoBehaviour {
 
     [Header("Movement Tuning")]
     public CharacterController cc;
-    public float acceleration = 5f;
+    public float groundAcceleration = 5f;
+    public float airAcceleration = 0.8f;
     public float maxSpeed = 10f;
     public float gravity = -20f;
     public float jumpSpeed = 10f;
@@ -25,8 +26,9 @@ public class PlayerController : MonoBehaviour {
     private float pitch = 0f, yaw = 0f, yawGoal = 0f;
 
     // move
-    private Vector3 movePlanarGlobal;
-    private float moveVertical;
+    [HideInInspector] public Vector3 movePlanarGlobal;
+    [HideInInspector] public float moveVertical;
+    // maybe "speed multiplier" for boost pads?
 
     void Start() {
 
@@ -61,25 +63,27 @@ public class PlayerController : MonoBehaviour {
 
     void UpdateMovement() {
 
-        bool airborne = !cc.isGrounded;
+        bool airborne = !(cc.isGrounded && moveVertical < 0);
 
         anim.SetBool("Airborne", airborne);
 
         // apply input to planar movement
         movePlanarGlobal += ( transform.right * Input.GetAxis("Horizontal")
-                            + transform.forward * Input.GetAxis("Vertical")) * acceleration * Time.deltaTime;
+                            + transform.forward * Input.GetAxis("Vertical"))
+                            * (airborne ? airAcceleration : groundAcceleration)
+                            * Time.deltaTime;
 
-        // limit planar speed
-        if (movePlanarGlobal.magnitude > maxSpeed) {
+        // gradually limit planar speed (when on ground)
+        if (!airborne && movePlanarGlobal.magnitude > maxSpeed) {
 
-            movePlanarGlobal = movePlanarGlobal.normalized * maxSpeed;
+            movePlanarGlobal = movePlanarGlobal.normalized * (movePlanarGlobal.magnitude - groundAcceleration * Time.deltaTime);
         }
 
         // apply planar drag if not inputing
         if (!airborne && !Input.GetButton("Horizontal") && !Input.GetButton("Vertical")) {
             
             if (movePlanarGlobal.magnitude > 1f) {
-                movePlanarGlobal = movePlanarGlobal.normalized * (movePlanarGlobal.magnitude - acceleration * Time.deltaTime);
+                movePlanarGlobal = movePlanarGlobal.normalized * (movePlanarGlobal.magnitude - groundAcceleration * Time.deltaTime);
             } else {
                 movePlanarGlobal *= 0f;
             }

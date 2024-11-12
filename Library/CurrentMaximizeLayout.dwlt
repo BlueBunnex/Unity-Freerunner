@@ -20,10 +20,10 @@ MonoBehaviour:
     y: 30
     width: 1792
     height: 1017
-  m_MinSize: {x: 579, y: 492}
+  m_MinSize: {x: 578, y: 471}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 1
-  controlID: 2288
+  controlID: 2507
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -134,10 +134,10 @@ MonoBehaviour:
     y: 0
     width: 1792
     height: 1017
-  m_MinSize: {x: 579, y: 492}
+  m_MinSize: {x: 578, y: 471}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 2289
+  controlID: 2508
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -159,10 +159,10 @@ MonoBehaviour:
     y: 0
     width: 1467
     height: 1017
-  m_MinSize: {x: 303, y: 492}
+  m_MinSize: {x: 302, y: 471}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 2290
+  controlID: 2509
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -184,10 +184,10 @@ MonoBehaviour:
     y: 0
     width: 1467
     height: 683
-  m_MinSize: {x: 303, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
+  m_MinSize: {x: 302, y: 200}
+  m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 2291
+  controlID: 2510
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -207,8 +207,8 @@ MonoBehaviour:
     y: 0
     width: 352
     height: 683
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 7}
   m_Panes:
   - {fileID: 7}
@@ -332,9 +332,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.59783727, y: -3.0238676, z: 5.279855}
+    m_Target: {x: -7.700563, y: 7.745678, z: -9.145258}
     speed: 2
-    m_Value: {x: 0.59783727, y: -3.0238676, z: 5.279855}
+    m_Value: {x: -7.700563, y: 7.745678, z: -9.145258}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -381,13 +381,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.17941777, y: 0.17370453, z: -0.032203306, w: -0.9677799}
+    m_Target: {x: 0.017257899, y: 0.98046505, z: -0.16811143, w: 0.10065304}
     speed: 2
-    m_Value: {x: -0.17941786, y: 0.17370462, z: -0.032203324, w: -0.9677804}
+    m_Value: {x: 0.017257882, y: 0.9804641, z: -0.16811126, w: 0.10065294}
   m_Size:
-    m_Target: 16.242975
+    m_Target: 27.051905
     speed: 2
-    m_Value: 16.242975
+    m_Value: 27.051905
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -539,22 +539,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Level/Props/Materials/Asphalt
+    - Assets/PolaroidSystem
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 67
   m_LastFolders:
-  - Assets/Level/Props/Materials/Asphalt
+  - Assets/PolaroidSystem
   m_LastFoldersGridSize: 67
   m_LastProjectPath: /Users/Erik/unityprojects/Breasts Freerunner
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b0520000
-    m_LastClickedID: 21168
-    m_ExpandedIDs: 000000008c4300008e430000904300009243000094430000c643000096520000c252000000ca9a3b
+    scrollPos: {x: 0, y: 11}
+    m_SelectedIDs: c2430000
+    m_LastClickedID: 17346
+    m_ExpandedIDs: 000000008c4300008e430000904300009243000094430000c643000096520000c2520000447800004678000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -609,7 +609,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000da410000043c0000584e0000404e00006c4e0000b2380000e4380000463e00005e3e0000643e00004c3e0000403e0000363e0000a85400008cbb000096ca0000704c000024440000a64e00009c3f00005a4000009c830000a08300008e8b0000da4b030030550000e4670000fc680000425b00005243000000000000a44300008e42000088420000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

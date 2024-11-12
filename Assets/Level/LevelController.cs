@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelController : MonoBehaviour {
 
@@ -9,17 +10,32 @@ public class LevelController : MonoBehaviour {
     // this takes in all the stuff it needs as parameters
     // and handles stuff like loading/setting up the level/whatever idk
 
+    [HeaderAttribute("Level Config")]
+    public int polaroidsToWin = 3;
+    //public IResettable[] enabledInThisLevel;
+
     public Transform startPoint;
+
+    [HeaderAttribute("Level Dependencies")]
     public GameObject player;
+    public Text timeReadout;
 
     private ArrayList toReset = new ArrayList(); // holds IResettable-s
     private int polaroidCount = 0;
+    
+    private float timeSeconds = 0;
 
     void Start() {
         
         instance = this;
 
         resetLevel();
+    }
+
+    void Update() {
+        timeSeconds += Time.deltaTime;
+
+        timeReadout.text = "" + timeSeconds;
     }
 
     public void resetLevel() {

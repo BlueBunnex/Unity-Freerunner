@@ -62,6 +62,7 @@
     <Analyzer Include="/Users/Erik/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.0.4/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/QuickOutline/Scripts/Outline.cs" />
     <Compile Include="Assets/Player/BreastJiggle.cs" />
     <Compile Include="Assets/PointSystem/PointHandler.cs" />
     <Compile Include="Assets/Level/LevelController.cs" />
@@ -70,7 +71,7 @@
     <Compile Include="Assets/PolaroidSystem/PolaroidController.cs" />
     <Compile Include="Assets/Level/IResettable.cs" />
     <Compile Include="Assets/Player/PlayerController.cs" />
-    <Compile Include="Assets/QuickOutline/Scripts/Outline.cs" />
+    <Compile Include="Assets/PolaroidSystem/PolaroidCompass.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/QuickOutline/Resources/Shaders/OutlineMask.shader" />

@@ -70,9 +70,13 @@
     <Compile Include="Assets/PolaroidSystem/PolaroidController.cs" />
     <Compile Include="Assets/Level/IResettable.cs" />
     <Compile Include="Assets/Player/PlayerController.cs" />
+    <Compile Include="Assets/QuickOutline/Scripts/Outline.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets/QuickOutline/Resources/Shaders/OutlineMask.shader" />
     <None Include="Assets/Level/Props/Water/Shaders/WaterShaded.shader" />
+    <None Include="Assets/QuickOutline/Readme.txt" />
+    <None Include="Assets/QuickOutline/Resources/Shaders/OutlineFill.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -23,7 +23,7 @@ public class LevelController : MonoBehaviour {
     private ArrayList toReset = new ArrayList(); // holds IResettable-s
     private int polaroidCount = 0;
     
-    private float timeSeconds = 0;
+    private float timeSeconds = 0f;
 
     void Start() {
         
@@ -35,10 +35,28 @@ public class LevelController : MonoBehaviour {
     void Update() {
         timeSeconds += Time.deltaTime;
 
-        timeReadout.text = "" + timeSeconds;
+        int ms = (int) (timeSeconds * 1000);
+
+        string minutes = "" + (ms / 60000);
+        ms %= 60000;
+        string seconds = "" + (ms / 1000);
+        ms %= 1000;
+        string millisec = "" + ms;
+
+        if (seconds.Length == 1) {
+            seconds = "0" + seconds;
+        }
+
+        while (millisec.Length < 3) {
+            millisec = "0" + millisec;
+        }
+
+        timeReadout.text = minutes + ":" + seconds + "." + millisec;
     }
 
     public void resetLevel() {
+
+        timeSeconds = 0;
 
         // reset resettables
         foreach (var resettable in toReset) {

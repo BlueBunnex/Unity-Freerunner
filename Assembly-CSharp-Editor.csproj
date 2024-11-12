@@ -62,7 +62,7 @@
     <Analyzer Include="/Users/Erik/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.0.4/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/World/Water/Scripts/Editor/GeneratePlane.cs" />
+    <Compile Include="Assets/Level/Props/Water/Scripts/Editor/GeneratePlane.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

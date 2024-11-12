@@ -64,15 +64,15 @@
   <ItemGroup>
     <Compile Include="Assets/Player/BreastJiggle.cs" />
     <Compile Include="Assets/PointSystem/PointHandler.cs" />
-    <Compile Include="Assets/LevelController.cs" />
-    <Compile Include="Assets/World/BounceArea.cs" />
-    <Compile Include="Assets/World/Water/Scripts/LowPolyWater.cs" />
-    <Compile Include="Assets/Player/PlayerController.cs" />
+    <Compile Include="Assets/Level/LevelController.cs" />
+    <Compile Include="Assets/Level/Props/BounceArea.cs" />
+    <Compile Include="Assets/Level/Props/Water/Scripts/LowPolyWater.cs" />
     <Compile Include="Assets/PolaroidSystem/PolaroidController.cs" />
-    <Compile Include="Assets/IResettable.cs" />
+    <Compile Include="Assets/Level/IResettable.cs" />
+    <Compile Include="Assets/Player/PlayerController.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets/World/Water/Shaders/WaterShaded.shader" />
+    <None Include="Assets/Level/Props/Water/Shaders/WaterShaded.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

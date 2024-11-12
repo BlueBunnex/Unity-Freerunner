@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour {
 
     void UpdateMovement() {
 
-        bool airborne = !(cc.isGrounded && moveVertical < 0);
+        bool airborne = !(cc.isGrounded && moveVertical <= 0);
 
         anim.SetBool("Airborne", airborne);
 
@@ -115,6 +115,17 @@ public class PlayerController : MonoBehaviour {
             }
         }
 
+        // store position before move
+        Vector3 posBeforeMove = transform.position;
+
+        // move
         cc.Move((movePlanarGlobal + moveVertical * Vector3.up) * Time.deltaTime);
+
+        // calculate new velocities from actual change in position
+        Vector3 trueVelocity = (transform.position - posBeforeMove) / Time.deltaTime;
+
+        movePlanarGlobal = Vector3.right * trueVelocity.x + Vector3.forward * trueVelocity.z;
+        //moveVertical = trueVelocity.y;
+
     }
 }

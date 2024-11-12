@@ -64,10 +64,12 @@
   <ItemGroup>
     <Compile Include="Assets/Player/BreastJiggle.cs" />
     <Compile Include="Assets/PointSystem/PointHandler.cs" />
+    <Compile Include="Assets/LevelController.cs" />
     <Compile Include="Assets/World/BounceArea.cs" />
-    <Compile Include="Assets/Player/PlayerController.cs" />
-    <Compile Include="Assets/World/LevelController.cs" />
     <Compile Include="Assets/World/Water/Scripts/LowPolyWater.cs" />
+    <Compile Include="Assets/Player/PlayerController.cs" />
+    <Compile Include="Assets/PolaroidSystem/PolaroidController.cs" />
+    <Compile Include="Assets/IResettable.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/World/Water/Shaders/WaterShaded.shader" />

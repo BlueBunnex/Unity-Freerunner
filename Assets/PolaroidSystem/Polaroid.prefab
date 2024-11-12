@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5686504992232095527}
   - component: {fileID: 8431799107510216160}
+  - component: {fileID: 6916678401225864850}
+  - component: {fileID: 7754246940825547402}
   m_Layer: 0
   m_Name: Polaroid
   m_TagString: Untagged
@@ -43,8 +45,36 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!111 &6916678401225864850
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4893640203090808706}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: cc1e0caa198bb4344b9a767105f838c5, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: cc1e0caa198bb4344b9a767105f838c5, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!114 &7754246940825547402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4893640203090808706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7aa5fdb77d634822a181aa664776068, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5105740111156750319
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,7 +87,7 @@ GameObject:
   - component: {fileID: 1268392410246461614}
   - component: {fileID: 1938835777462869840}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,11 +102,11 @@ Transform:
   m_GameObject: {fileID: 5105740111156750319}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.01, y: 1, z: 1}
+  m_LocalScale: {x: 0.01, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 5686504992232095527}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 95.470276, z: 0}
 --- !u!33 &1268392410246461614
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -104,7 +134,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: fb5f0555463fc4884b66d43bf93050ac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
